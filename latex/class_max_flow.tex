@@ -1,0 +1,131 @@
+\doxysection{Max\+Flow Class Reference}
+\hypertarget{class_max_flow}{}\label{class_max_flow}\index{MaxFlow@{MaxFlow}}
+
+
+Class for computing the maximum flow in a flow network.  
+
+
+
+
+{\ttfamily \#include $<$maxflow.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_max_flow_aae4c29684728a71558ef3f77210b4008}{Max\+Flow}} (int vertices)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the flow network with a given number of vertices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_max_flow_ac7dfa12fe74352731dd0ea6165d15119}{add\+Edge}} (int from, int to, int cap)
+\begin{DoxyCompactList}\small\item\em Adds a directed edge with a specified capacity to the flow network. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_max_flow_a90d15e2d5bc14112882708a1757d9978}{calculate\+Max\+Flow}} (int source, int sink)
+\begin{DoxyCompactList}\small\item\em Computes the maximum flow from source to sink using the Edmonds-\/\+Karp algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_max_flow_a8aa65f387c4561e3b87e8c3eae381356}{save\+Graph\+To\+File}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Saves the flow network to a file in Graphviz format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for computing the maximum flow in a flow network. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_max_flow_aae4c29684728a71558ef3f77210b4008}\index{MaxFlow@{MaxFlow}!MaxFlow@{MaxFlow}}
+\index{MaxFlow@{MaxFlow}!MaxFlow@{MaxFlow}}
+\doxysubsubsection{\texorpdfstring{MaxFlow()}{MaxFlow()}}
+{\footnotesize\ttfamily \label{class_max_flow_aae4c29684728a71558ef3f77210b4008} 
+Max\+Flow\+::\+Max\+Flow (\begin{DoxyParamCaption}\item[{int}]{vertices}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor to initialize the flow network with a given number of vertices. 
+
+Constructs a graph with the specified number of vertices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & Number of vertices in the graph. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_max_flow_ac7dfa12fe74352731dd0ea6165d15119}\index{MaxFlow@{MaxFlow}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!MaxFlow@{MaxFlow}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily \label{class_max_flow_ac7dfa12fe74352731dd0ea6165d15119} 
+void Max\+Flow\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{from}{, }\item[{int}]{to}{, }\item[{int}]{cap}{}\end{DoxyParamCaption})}
+
+
+
+Adds a directed edge with a specified capacity to the flow network. 
+
+Adds an edge to the flow network.
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The starting vertex of the edge. \\
+\hline
+{\em to} & The ending vertex of the edge. \\
+\hline
+{\em cap} & The capacity of the edge. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_max_flow_a90d15e2d5bc14112882708a1757d9978}\index{MaxFlow@{MaxFlow}!calculateMaxFlow@{calculateMaxFlow}}
+\index{calculateMaxFlow@{calculateMaxFlow}!MaxFlow@{MaxFlow}}
+\doxysubsubsection{\texorpdfstring{calculateMaxFlow()}{calculateMaxFlow()}}
+{\footnotesize\ttfamily \label{class_max_flow_a90d15e2d5bc14112882708a1757d9978} 
+int Max\+Flow\+::calculate\+Max\+Flow (\begin{DoxyParamCaption}\item[{int}]{source}{, }\item[{int}]{sink}{}\end{DoxyParamCaption})}
+
+
+
+Computes the maximum flow from source to sink using the Edmonds-\/\+Karp algorithm. 
+
+Calculates the maximum flow between the source and sink vertices using the Edmonds-\/\+Karp algorithm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source vertex. \\
+\hline
+{\em sink} & The sink vertex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the maximum flow.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source vertex. \\
+\hline
+{\em sink} & The sink vertex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum flow value. 
+\end{DoxyReturn}
+\Hypertarget{class_max_flow_a8aa65f387c4561e3b87e8c3eae381356}\index{MaxFlow@{MaxFlow}!saveGraphToFile@{saveGraphToFile}}
+\index{saveGraphToFile@{saveGraphToFile}!MaxFlow@{MaxFlow}}
+\doxysubsubsection{\texorpdfstring{saveGraphToFile()}{saveGraphToFile()}}
+{\footnotesize\ttfamily \label{class_max_flow_a8aa65f387c4561e3b87e8c3eae381356} 
+void Max\+Flow\+::save\+Graph\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption}) const}
+
+
+
+Saves the flow network to a file in Graphviz format. 
+
+Saves the graph in Graphviz format to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to save the graph.\\
+\hline
+{\em filename} & The name of the file to save the graph. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the file cannot be opened for writing. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+maxflow.\+h\item 
+\mbox{\hyperlink{maxflow_8cpp}{maxflow.\+cpp}}\end{DoxyCompactItemize}
